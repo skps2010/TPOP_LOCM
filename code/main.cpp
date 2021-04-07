@@ -6,17 +6,6 @@
 #include <vector>
 
 int main() {
-  //    std::string action;
-  //    CreatureCard c(1, 1, 1, 1, 1, 1, 1, "G", 1, 1, 1, 1), d(1, 2, 1, 1, 1,
-  //    1, 1, "G", 1, 1, 1, 1); c.summon(action, 0); d.summon(action, 1);
-  //    std::cout << c.canKill(d) << std::endl;
-  //    c.attackTo(action, d);
-
-  //    ItemCard i(1, 1, 1, 1, 1, 1, 1, "G", 1, 1, 1, 0);
-  //    i.use(action, d.instanceID());
-
-  //    std::cout << action << std::endl;
-  //    std::cout << (i == d)<< std::endl;
   while (1) {
     std::vector<Card> cardOptions;
     std::vector<CreatureCard>
