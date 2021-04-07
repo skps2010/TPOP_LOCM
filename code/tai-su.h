@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-const int VERSION = 2;
+const int VERSION = 1;
 
 #pragma region MAGIC_VARS
 enum CardType { CREATURE, GREENITEM, REDITEM, BLUEITEM };
@@ -25,7 +25,6 @@ enum Ability {  // BCDGLWP
     PLAYER
 };
 #pragma endregion
-
 #pragma region CARD_TYPES
 class Card
 {
