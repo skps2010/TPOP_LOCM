@@ -1,0 +1,13 @@
+.vscode/*
+.vscode
+
+*.o
+Answer.cpp
+
+code/exe_bin
+code/exe_bin.b64
+*.docx
+*.pdf
+
+*.zip
+tcc_template
