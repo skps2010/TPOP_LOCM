@@ -1,5 +1,22 @@
 # TPOP_LOCM
 這是 2021 年的師大進階程式設計作業：Legend of Code and Magic
+## folder structure
+```
+.
+├── authors.json   # author info shall be recorded here
+├── auto_report.py
+├── code           # your workplace
+│   ├── main.cpp
+│   ├── makefile   
+│   ├── tai-su.cpp # main library
+│   └── tai-su.h   # main library header
+├── main_stub.cpp
+├── make_c.py
+├── makefile       # export production makefile
+├── readme.md
+├── requirements.txt # python requirements
+└── tcc_template.docx # docx template
+```
 ## how 2 use
     
 ```sh
