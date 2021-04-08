@@ -450,7 +450,10 @@ void GameManager::print()
 /*                the below area is modifiable               */
 /*************************************************************/
 
-void Card::calculateGetScore()
+// The Card with lower score will be selected first!!!!!
+
+void Card::calculateGetScore()  // Used in drawing cards phase to
+                                // decide what to pick
 {
     switch (cardType_) {
     case CREATURE:
@@ -468,16 +471,21 @@ void Card::calculateGetScore()
     }
 }
 
-void CreatureCard::calculateUseScore(
-    int enemyTotalHP,
-    int ownTotalHP,
-    int enemyTotalAttack,
-    int ownTotalAttack)
+void CreatureCard::
+    calculateUseScore(  // Used for cards in hand to decide what
+                        // to use, will be compared with
+                        // Item::calculateUseScore()
+        int enemyTotalHP,
+        int ownTotalHP,
+        int enemyTotalAttack,
+        int ownTotalAttack)
 {
     score_ = -attack_ / cost_;
 }
 
-void CreatureCard::calculateAttackScore(
+void CreatureCard::calculateAttackScore(  // Used for cards on
+                                          // board to decide what
+                                          // to attack
     const CreatureCard &attacker)
 {
     if (abilities_[PLAYER])  // if there are no cards with Guard,
@@ -504,7 +512,8 @@ void CreatureCard::calculateAttackScore(
 }
 
 void CreatureCard::calculateRedItemScore(const Card &attacker)
-{
+{  // used for red item cards to decide what to attack
+
     // if it can kill, kill the one with the most health, if not,
     // attack the one with the least health
     score_ =
@@ -517,7 +526,8 @@ void CreatureCard::calculateRedItemScore(const Card &attacker)
 }
 
 void CreatureCard::calculateAttackOrderScore()
-{
+{  // used for cards on board to decide what attack first
+
     // The more damage it has, the later it will attack
     score_ = attack_;
     // If it has Lethal, it should attack first
@@ -525,7 +535,10 @@ void CreatureCard::calculateAttackOrderScore()
         score_ -= 1000;
 }
 
-void ItemCard::calculateUseScore()
+void ItemCard::
+    calculateUseScore()  // Used for cards in hand to decide what
+                         // to use, will be compared with
+                         // CreatureCard::calculateUseScore()
 {
     switch (cardType_) {
     case GREENITEM:
