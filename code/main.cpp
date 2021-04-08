@@ -7,19 +7,16 @@
 
 int main()
 {
-    while (1)
-    {
+    while (1) {
         GameManager g;
         g.setUp();
 
         // Draw Phase
-        if (g.playerMana == 0)
-        {
+        if (g.playerMana == 0) {
             g.draw();
         }
         // Battle Phase
-        else
-        {
+        else {
             g.battle();
         }
         // Print actions

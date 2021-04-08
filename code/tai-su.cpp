@@ -11,7 +11,7 @@ static double p2(double a)
     return a * a;
 }
 #pragma endregion
-#pragma region Card_IMPLEMENTATION
+#pragma region Card_impl
 Card::Card(
     int cardNumber,
     int instanceId,
@@ -122,7 +122,7 @@ void Card::getDamaged(int amount)
         defDiff(-amount);
 }
 #pragma endregion
-#pragma region CreatureCard_IMPLEMENTATION
+#pragma region CreatureCard_impl
 CreatureCard::CreatureCard(
     int cardNumber,
     int instanceId,
@@ -179,7 +179,7 @@ void CreatureCard::attackTo(
 
 
 #pragma endregion
-#pragma region ItemCard_IMPLEMENTATION
+#pragma region ItemCard_impl
 ItemCard::ItemCard(
     int cardNumber,
     int instanceId,
@@ -231,7 +231,7 @@ void ItemCard::use(std::string &action, CreatureCard &target)
 }
 #pragma endregion
 
-#pragma region GameManager_IMPLEMENTATION
+#pragma region GameManager_impl
 void GameManager::setUp()
 {
     std::cin >> playerHealth >> playerMana >> playerDeck >>
@@ -445,10 +445,9 @@ void GameManager::print()
 }
 #pragma endregion
 
-#pragma region User_IMPLEMENTATION
-
+#pragma region Modifiable
 /*************************************************************/
-/*                         以下可編輯                          */
+/*                the below area is modifiable               */
 /*************************************************************/
 
 void Card::calculateGetScore()
@@ -542,5 +541,4 @@ void ItemCard::calculateUseScore()
         break;
     }
 }
-
 #pragma endregion
