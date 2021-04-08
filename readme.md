@@ -1,5 +1,9 @@
-# TPOP_LOCM
+# Tai-su
 這是 2021 年的師大進階程式設計作業：Legend of Code and Magic
+
+## 名稱由來
+由「大師」臺語羅馬拼音：Tāi-su 簡化而來
+
 ## folder structure
 ```
 .
@@ -17,6 +21,11 @@
 ├── requirements.txt # python requirements
 └── tcc_template.docx # docx template
 ```
+
+## 核心程式碼
+code 資料夾中的 main.cpp 和 tau-su.cpp 為可供使用者使用的程式碼  
+tai-su.cpp 的最下面有提供使用者定義計算行動分數的 functions ，注意是分數越低的越會被優先選取
+
 ## how 2 use
     
 ```sh
