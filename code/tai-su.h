@@ -1,3 +1,4 @@
+#pragma once
 #include <algorithm>
 #include <cmath>
 #include <iostream>
@@ -123,5 +124,30 @@ public:
     void calculateUseScore();
 
 private:
+};
+#pragma endregion
+#pragma region GameManager
+
+class GameManager
+{
+public:
+    std::vector<Card> cardOptions;
+    std::vector<CreatureCard>
+        board[4];  // myLeft myRight opponentLeft opponentRight
+    int enemyTotalHP[2] = {0}, enemyTotalAttack[2] = {0},
+        ownTotalHP[2] = {0}, ownTotalAttack[2] = {0};
+    // game information
+    int playerHealth, playerMana, playerDeck, playerRune,
+        playerDraw;
+    int opponentHealth, opponentMana, opponentDeck, opponentRune,
+        opponentDraw;
+    int opponentHand;
+    int opponentActions;
+    std::string actions;
+
+    void setUp();
+    void draw();
+    void battle();
+    void print();
 };
 #pragma endregion
